@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/master.css') }}">
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap');
+    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <div class="min_mobile_width">
+      <img src="{{ url_for('static', filename='lifx_logo.png') }}" alt="" class="img_center padding_top_20">
+    </div>
+
+    <p class="white setuptext padding_top_40 padding_left_20">set up</p>
+    <div class="serial">
+        <p class="serial">serial number: LIFX Color 1000_141fe3_AJ</p>
+    </div>
+
+    <p class="white smalltext padding_top_40 padding_left_20">your LIFX device will connect to:</p>
+    <p class="white largetext padding_top_5 padding_left_20">HuizeSathe</p>
+    <p class="white smalltext padding_top_20 padding_left_20">please enter password:</p>
+
+
+
+    <form action="/run_python_file" method="POST">
+    <input class="pwfield" name="nopol">
+    <input src="{{ url_for('static', filename='knopje.svg') }}" id="print_nopol" type="image" class="knopje">
+    </form>
+
+  </body>
+</html>
